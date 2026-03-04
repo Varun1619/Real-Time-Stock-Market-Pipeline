@@ -1,1 +1,29 @@
+# Environment variables
 .env
+
+# Local landing zone data files
+landing_zone/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+envs/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# dbt
+dbt_project/target/
+dbt_project/logs/
+dbt_project/.user.yml
+
+# Airflow
+airflow/logs/
+airflow/*.db
+airflow/*.cfg

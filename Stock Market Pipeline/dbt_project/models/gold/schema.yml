@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: gold_daily_summary
+    description: "Daily aggregated stock metrics per ticker"
+    columns:
+      - name: ticker
+        description: "Stock ticker symbol"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["AAPL", "MSFT", "TSLA", "AMZN", "GOOGL", "META"]
+      - name: trade_date
+        description: "Date of the trading session"
+        tests:
+          - not_null
+      - name: avg_close
+        description: "Average closing price for the day"
+        tests:
+          - not_null
+
+  - name: gold_moving_averages
+    description: "7 and 30 day moving averages per ticker"
+    columns:
+      - name: ticker
+        tests:
+          - not_null
+      - name: close
+        tests:
+          - not_null

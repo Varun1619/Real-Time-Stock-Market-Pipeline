@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: stock_data
+    catalog: workspace
+    schema: default
+    tables:
+      - name: stock_silver
+        description: "Cleaned and deduplicated stock quotes from Silver layer"

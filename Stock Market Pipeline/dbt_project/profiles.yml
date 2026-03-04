@@ -1,0 +1,11 @@
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: "dbc-c5e08541-a220.cloud.databricks.com"        
+      http_path: "/sql/1.0/warehouses/0f3c147dc22f9d15"  
+      auth_type: oauth                              
+      catalog: workspace                            
+      schema: default                               
+      threads: 1                                   
